@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cont-general {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+    background:#2f2f2f;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.left,
+.right {
+    width: 44%;
+    border: 1px solid aquamarine;
+    text-align: center;
+    padding: 30px;
+    min-height: 70vh;
+    background:#2f2f2f;
+    box-shadow: 0 4px 8px 0px aquamarine;
+}
+
+h2 {
+    color: aquamarine;
+    font-size: 46px;
+    margin-bottom: 40px;
+    
+}
+
+
+button {
+    background: transparent;
+    box-shadow:  0 4px 8px 0px #0000;
+    border-radius: 10px;
+    padding: 14px 30px;
+    color: #ffff;
+    width: 220px;
+    margin: 14px 20px;
+    transition: .4s;
+    cursor: pointer;
+
+}
+
+
+button:hover {
+    box-shadow:  0 4px 8px 0px aquamarine;
+    color: aquamarine;
+
+}
+
+#Figura {
+     width: 250px;
+     height: 250px;
+     background: aquamarine;
+     margin: 80px auto;
+
+}
+
+#cont-general.dia{
+    background: #ffff;
+}
+
+#Figura.degradado{
+    background: linear-gradient(to right ,rgb(255, 80, 226), rgb(230, 194, 173),rgb(205, 37, 211));
+}
+
+/* .animacions{
+    width: 100%;
+    height: 100%;
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #b61d7b;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+} */
+
+.animacions{
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    background-color: rgb(224, 33, 192);
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  @keyframes stretch {
+    0% {
+      transform: scale(.3);
+      background-color: red;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      transform: scale(1.5);
+      background-color: yellow;
+    }
+  }
+  
+  body,
+  html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#panelLateral{
+  position: absolute;
+  left: -400px;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: rgb(18, 192, 140);
+  z-index: 10;
+  transition: 0.4s;
+}
+
+#panelLateral.active{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 100vh;
+  background: rgb(18, 192, 140);
+  z-index: 10;
+}
+
+#panelSuperior{
+  position: absolute;
+  
+  top: -100vh;
+  width: 100%;
+  height: 100vh;
+  background: rgb(81, 45, 211);
+  z-index: 10;
+  transition: 0.4s;
+}
+
+#panelSuperior.active{
+  position: absolute;
+ 
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(81, 45, 211);
+  z-index: 10;
+}
+
+#panelLateral button{
+  width: 24px;
+  border: transparent;
+  background: transparent;
+
+}
+
+#panelLateral .row{
+  display: flex;
+  align-items:center ;
+  justify-content: space-evenly;
+}
+
+#panelLateral h2{
+  font-size: 50px;
+  margin-top: 50px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: -30px;
+}
+
+#panelLateral li{
+  margin-left: 30px;
+  list-style-type: none;
+  font-size: 24px;
+  padding-bottom: 42px;
+}
+
+#panelLateral a{
+  text-decoration: none;
+}
+
+#panelLateral a:hover{
+  border-radius: 50px;
+  background: #bea0b1;
+  padding: 12px;
+}
+
+#panelSuperior iframe{
+  margin: 0 50px 50px 150px;
+  height: 80vh;
+  width: 80%;
+}
+
+#panelSuperior button{
+  width: 24px;
+  border: transparent;
+  background: transparent;
+
+}
+
+#panelSuperior .fila{
+  display: flex;
+  align-items:center ;
+  justify-content: space-evenly;
+}
+
+#panelSuperior h2{
+  font-size: 50px;
+  margin-top: 50px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: -30px;
+}
+
+#panelSuperior{
+  position: absolute;
+  
+  top: -100vh;
+  width: 100%;
+  height: 100vh;
+  background: rgb(45, 211, 147);
+  z-index: 10;
+  transition: 0.4s;
+}
+
+#panelSuperior.active{
+  position: absolute;
+ 
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(45, 211, 147);
+  z-index: 10;
+}
+
+#panelSuperior button i{
+  font-size: 30px;
+  color: black;
+}
+
+#panelSuperior a:hover{
+  border-radius: 50px;
+  background:  rgb(45, 211, 147);
+  padding: 12px;
+}
